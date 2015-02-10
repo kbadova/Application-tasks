@@ -1,0 +1,29 @@
+int tetrahedron_filled ( int arr[]  , int Liters , int LenghtOfArray ) 
+{      
+        int i = 0 ;  
+        while ( i < LenghtOfArray )
+    {          
+        float Vsm ;
+        Vsm = ( sqrt( 2 ) * pow ( arr [ i ] , 3 ) ) / 12  ; 
+        float Vliters ; 
+        Vliters = Vsm / 1000 ; 
+        
+        if ( Vliters > Liters )
+          {  i++ ; 
+          }      
+        else if ( Vliters <= Liters )
+      
+          {  float Sum = 0 ;
+           Sum += Vliters;
+           if ( Sum < Liters )
+            { 
+                i++ ;
+                return i ; 
+            }
+           else if ( Sum >= Liters )
+            {   return i ; 
+            }
+          }     
+    }   
+}
+  
