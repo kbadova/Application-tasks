@@ -1,0 +1,8 @@
+ float fill_tetrahedron ( int num )
+  {      
+        float Vsm ;
+        Vsm = ( sqrt( 2 ) * pow( num , 3 ) ) / 12  ; 
+        float Vliters ; 
+        Vliters = Vsm / 1000 ; 
+        return Vliters ;
+  }
